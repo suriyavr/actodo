@@ -1,3 +1,4 @@
 /node_modules
 /build
 .env
+.gitignoregit rm --cached package-lock.json
