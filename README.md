@@ -4,6 +4,12 @@ A simple to-do list web app built with **React**, **React Router** and **Tailwin
 
 This is a learning project to practice React fundamentals: components, props, state, routing and passing data between pages.
 
+## Live Demo
+
+🔗 [https://actodo-lilac-xi.vercel.app/](https://actodo-lilac-xi.vercel.app/)
+
+Log in with the demo account (see below) or sign up with a new one.
+
 ## Features
 
 - Sign up with a username and password
@@ -54,7 +60,7 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/<your-repo-name>.git
+git clone https://github.com/suriyavr/actodo.git
 
 # Go to the project folder
 cd actodo
@@ -102,4 +108,4 @@ A default user is available for testing:
 
 ## Author
 
-Suriya – [(https://github.com/suriyavr)]
+Your Name – [GitHub](https://github.com/suriyavr)
