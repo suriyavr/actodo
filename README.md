@@ -108,4 +108,4 @@ A default user is available for testing:
 
 ## Author
 
-Your Name – [GitHub](https://github.com/suriyavr)
+Suriya  – [GitHub](https://github.com/suriyavr)
