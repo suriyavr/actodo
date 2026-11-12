@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# ACToDo – React To-Do List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple to-do list web app built with **React**, **React Router** and **Tailwind CSS**. Users can sign up, log in, and land on a personalized dashboard where they add and delete their daily activities.
 
-## Available Scripts
+This is a learning project to practice React fundamentals: components, props, state, routing and passing data between pages.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Sign up with a username and password
+- Log in with an existing account
+- Error message when login fails
+- Personalized welcome header on the landing page
+- Add new activities (empty input is ignored)
+- Delete activities from the list
+- Message shown when there are no activities
+- Client-side routing between Login, Signup and Landing pages
+- Responsive layout styled with Tailwind CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- React Router DOM
+- Tailwind CSS
+- JavaScript (ES6+)
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+src/
+├── components/
+│   ├── AddToDoform.jsx
+│   ├── Card.jsx
+│   ├── Header.jsx
+│   ├── Todocontainer.jsx
+│   ├── TodoItem.jsx
+│   └── ToDolist.jsx
+├── Pages/
+│   ├── Landing.jsx
+│   ├── Login.jsx
+│   └── Signup.jsx
+├── App.js
+├── index.js
+└── index.css
+```
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Node.js](https://nodejs.org/) (v16 or later)
+- npm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+```bash
+# Clone the repository
+git clone https://github.com/<your-username>/<your-repo-name>.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Go to the project folder
+cd actodo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Start the development server
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The app runs at [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+### Demo account
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A default user is available for testing:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Username:** Karthik
+- **Password:** Karthik
 
-### Code Splitting
+## How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. `App.js` keeps the list of users in state and passes it to the Login and Signup pages as props.
+2. Signup adds a new user to that list.
+3. Login checks the entered username and password against the list.
+4. On success, the user is sent to `/Landing`, and their username is passed using React Router's `navigate` state.
+5. The Landing page shows the username in the header and renders the to-do container.
+6. `Todocontainer` holds the list of activities in state. `AddToDoform` adds items and `TodoItem` deletes them.
 
-### Analyzing the Bundle Size
+## Known Limitations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Users and activities are stored only in React state, so they are lost when the page is refreshed.
+- Passwords are stored as plain text. This is for practice only and must never be done in a real application.
+- The Confirm Password field on the Signup page is not validated yet.
+- The cards on the Landing page show fixed text (not live data).
 
-### Making a Progressive Web App
+## Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Validate Signup (empty fields, duplicate usernames, matching passwords)
+- Save users and activities in `localStorage` or a backend database
+- Hash passwords and add real authentication
+- Protect the Landing page so only logged-in users can open it
+- Edit activities and mark them as completed
+- Show the real date and time in the cards
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Suriya – [(https://github.com/suriyavr)]
